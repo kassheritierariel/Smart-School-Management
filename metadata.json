@@ -1,0 +1,6 @@
+{
+  "name": "Smart School Management",
+  "description": "Un système complet et moderne de gestion scolaire avec tableau de bord interactif, gestion des élèves, des enseignants, des cours, des présences, des notes et de la facturation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

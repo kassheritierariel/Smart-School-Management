@@ -1,0 +1,26 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile containing roles and access level",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string", "enum": ["superadmin", "admin", "teacher", "student", "parent"] },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email", "role"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles"
+    },
+    "/global_settings/{document=**}": {
+      "schema": "any",
+      "description": "Settings only accessible by super admin"
+    }
+  }
+}
